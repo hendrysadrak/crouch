@@ -70,6 +70,13 @@ console.log( output );
 ```
 
 
+## Todo
+
+* Add support for getter/setter functions
+* Add support for loops
+* Add support for if/elseif/else
+
+
 ## License
 
 [MIT](LICENSE)
