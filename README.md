@@ -14,14 +14,14 @@ npm install --save crouch
 ```
 
 In browser get the code from https://github.com/hendrysadrak/crouch/blob/master/crouch.js or:
-```
+```html
 <script src="https://cdn.rawgit.com/hendrysadrak/crouch/master/crouch.js"></script>
 ```
 
 
 ## Usage
 
-```
+```javascript
 'use strict';
 
 var crouch = require('crouch');
@@ -32,7 +32,7 @@ import crouch from 'crouch';
 
 Using values as array:
 
-```
+```javascript
 var
     template = 'Hello, my name is {0}. I\'m from {1}.',
     values   = [ 'James', 'Chicago' ];
@@ -47,7 +47,7 @@ console.log( output );
 
 Using values as object:
 
-```
+```javascript
 var
     template = 'Hello, my name is {name}. I\'m from {city}.',
     values   = { name: 'James', city: 'Chicago' };
