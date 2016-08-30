@@ -1,0 +1,24 @@
+{
+  "name": "crouch",
+  "version": "0.0.1",
+  "description": "Micro JS templating engine",
+  "main": "crouch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hendrysadrak/crouch.git"
+  },
+  "keywords": [
+    "templating",
+    "js",
+    "parser"
+  ],
+  "author": "Hendry Sadrak <hendry.sadrak@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hendrysadrak/crouch/issues"
+  },
+  "homepage": "https://github.com/hendrysadrak/crouch"
+}
