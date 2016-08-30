@@ -70,4 +70,13 @@ var crouch = function ( template, values ) {
 /*
  * Export
  */
-module.exports = crouch;
+
+// CommonJS
+if ( typeof exports === "object" && exports ) {
+    module.exports = crouch;
+}
+
+// Browser
+else {
+    this.crouch = crouch;
+}
