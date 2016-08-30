@@ -31,6 +31,10 @@ var crouch = function ( template, values ) {
      * Loop through all the placeholders that matched with regex
      */
     while ( match = _re.exec( template ) ) {
+        /*
+         * Get value from given values and
+         * if it doesn't exist use empty string
+         */
         var _value = values[ match[ 1 ] ];
         if ( !_value ) _value = "";
 
@@ -45,6 +49,22 @@ var crouch = function ( template, values ) {
      */
     return template;
 };
+
+
+//
+// // Example:
+//
+// const
+//     template = 'Hello, my name is {0}. I\'m from {1}.',
+//     values   = [ 'James', 'Chicago' ];
+//
+//
+// const output = crouch( template, values );
+//
+//
+// console.log( output );
+// // Hello, my name is James. I'm from Chicago.
+//
 
 
 /*
