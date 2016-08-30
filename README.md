@@ -47,7 +47,7 @@ var
     values   = [ 'James', 'Chicago' ];
 
 
-const output = crouch( template, values );
+var output = crouch( template, values );
 
 
 console.log( output );
@@ -62,7 +62,7 @@ var
     values   = { name: 'James', city: 'Chicago' };
 
 
-const output = crouch( template, values );
+var output = crouch( template, values );
 
 
 console.log( output );
