@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/crouch.png?compact=true)](https://nodei.co/npm/crouch/)
 
-Crouch is a micro JS template engine. I created this because I had a need for supersmall and lightweight module which would replace some strings inside templates. Templates were as strings like `Hello, my name is {name}. I'm from {city}.` or as HTML like `<p class="{className}">{paragraphContent}</p>`. 
+Crouch is a micro JS template engine. I created this because I had a need for supersmall and lightweight module which would replace some strings inside templates. Templates were as strings like `Hello, my name is {name}. I'm from {city}.` or as HTML like `<p class="{className}">{paragraphContent}</p>`.
 
 So I created `crouch`. It can replace placeholders formated as `{number|string}` in example `{0}` `{1}` `{hello}` `{World}`.
 
@@ -25,7 +25,7 @@ In browser get the code from https://github.com/hendrysadrak/crouch/blob/master/
 
 ## Try
 
-You can try crouch in action [here on Tonicdev](https://tonicdev.com/hendrysadrak/crouch-example-1)
+You can try crouch in action [here on Tonicdev](https://tonicdev.com/hendrysadrak/crouch-example-01)
 
 
 ## Usage
