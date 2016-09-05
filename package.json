@@ -1,6 +1,6 @@
 {
   "name": "crouch",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Micro JS templating engine",
   "main": "crouch.js",
   "scripts": {
