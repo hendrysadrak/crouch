@@ -27,6 +27,8 @@ In browser get the code from https://github.com/hendrysadrak/crouch/blob/master/
 
 You can try crouch in action [here on Tonicdev](https://tonicdev.com/hendrysadrak/crouch-example-01)
 
+[Using Crouch with html templates](https://tonicdev.com/hendrysadrak/crouch-example-2)
+
 
 ## Usage
 
