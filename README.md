@@ -70,6 +70,13 @@ console.log( output );
 ```
 
 
+## Developing
+```bash
+npm i
+npm run build
+```
+
+
 ## Todo
 
 * Add support for getter/setter functions
