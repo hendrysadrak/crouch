@@ -17,15 +17,17 @@ Using npm:
 npm install --save crouch
 ```
 
-In browser get the code from https://github.com/hendrysadrak/crouch/blob/master/crouch.js or:
+In browser get the code https://github.com/hendrysadrak/crouch/tree/master/dist or:
 ```html
-<script src="https://cdn.rawgit.com/hendrysadrak/crouch/master/crouch.js"></script>
+<script src="https://cdn.rawgit.com/hendrysadrak/crouch/blob/master/dist/crouch.js"></script>
 ```
 
 
 ## Try
 
 You can try crouch in action [here on Tonicdev](https://tonicdev.com/hendrysadrak/crouch-example-01)
+
+[Using Crouch with html templates](https://tonicdev.com/hendrysadrak/crouch-example-2)
 
 
 ## Usage
