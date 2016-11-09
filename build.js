@@ -1,13 +1,15 @@
+'use strict';
+
 const
-    fs      = require( 'fs' ),
+    fs       = require( 'fs' ),
     compiler = require( 'google-closure-compiler-js' ),
-    package = require( './package.json' );
+    pkg = require( './package.json' );
 
 const
     _compiled = new Date().toString();
 
 const buildHeader = `/**!
- * Crouch.js – v${package.version}
+ * Crouch.js – v${pkg.version}
  * Compiled ${_compiled}
  * @author: Hendry Sadrak (https://www.hendrysadrak.com)
  * @license: MIT
@@ -28,7 +30,7 @@ const jsCode = fs.readFileSync( './lib/crouch.js', 'utf8' );
  * Closure compiler flags
  */
 const flags = {
-    jsCode: [ { src: jsCode } ],
+    jsCode:          [ { src: jsCode } ],
     createSourceMap: true
 };
 
@@ -51,5 +53,9 @@ for ( const warning of out.warnings ) {
 /**
  * Write to file
  */
-fs.writeFile( './dist/crouch.js', buildHeader + out.compiledCode );
-fs.writeFile( './dist/crouch.js.map', out.sourceMap );
+fs.writeFile( './dist/crouch.js', buildHeader + out.compiledCode, () => {
+    console.log( 'crouch.js written' );
+} );
+fs.writeFile( './dist/crouch.js.map', out.sourceMap, () => {
+    console.log( 'crouch.js.map written' );
+} );
