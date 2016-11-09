@@ -1,12 +1,18 @@
 const
     fs      = require( 'fs' ),
-    compile = require( 'google-closure-compiler-js' ).compile;
+    compiler = require( 'google-closure-compiler-js' ),
+    package = require( './package.json' );
 
+const
+    _compiled = new Date().toString();
 
 const buildHeader = `/**!
- * Crouch.js
- * Author: Hendry Sadrak <hendry.sadrak@outlook.com> (http://hendrysadrak.com)
- * License: MIT
+ * Crouch.js – v${package.version}
+ * Compiled ${_compiled}
+ * @author: Hendry Sadrak (https://www.hendrysadrak.com)
+ * @license: MIT
+ * http://www.opensource.org/licenses/mit-license
+ * see: https://github.com/hendrysadrak/crouch for details
  */
 `;
 
@@ -15,7 +21,7 @@ const buildHeader = `/**!
  * Read javascript from file
  * @type {*}
  */
-const jsCode = fs.readFileSync( './lib/crouch.js', { encoding: 'utf8' } );
+const jsCode = fs.readFileSync( './lib/crouch.js', 'utf8' );
 
 
 /**
@@ -30,7 +36,7 @@ const flags = {
 /**
  * Compiled code
  */
-const out = compile( flags );
+const out = compiler.compile( flags );
 
 /**
  * Report errors / warnings
