@@ -3,7 +3,7 @@
 const
     fs       = require( 'fs' ),
     compiler = require( 'google-closure-compiler-js' ),
-    pkg = require( './package.json' );
+    pkg      = require( './package.json' );
 
 const
     _compiled = new Date().toString();
@@ -19,43 +19,50 @@ const buildHeader = `/**!
 `;
 
 
-/**
- * Read javascript from file
- * @type {*}
- */
-const jsCode = fs.readFileSync( './lib/crouch.js', 'utf8' );
+function compileAndSave( _properties ) {
+    const properties = _properties;
 
+    const time1 = Date.now();
+    console.info( `\nStarting compilation of ${properties.in}` );
 
-/**
- * Closure compiler flags
- */
-const flags = {
-    jsCode:          [ { src: jsCode } ],
-    createSourceMap: true
-};
+    const jsCode = fs.readFileSync( properties.in, 'utf8' );
 
+    properties.flags.jsCode = [ { src: jsCode } ];
 
-/**
- * Compiled code
- */
-const out = compiler.compile( flags );
+    const _compiled = compiler.compile( properties.flags );
 
-/**
- * Report errors / warnings
- */
-for ( const error of out.errors ) {
-    console.error( error );
+    const time2    = Date.now();
+    const timeTook = Math.round( (time2 - time1) / 10 ) / 100;
+    console.info( `Compiled in ${timeTook}s` );
+
+    /**
+     * Report errors / warnings
+     */
+    for ( const error of _compiled.errors ) {
+        console.error( error );
+    }
+    for ( const warning of _compiled.warnings ) {
+        console.warn( warning );
+    }
+
+    /**
+     * Write to file
+     */
+    fs.writeFile( properties.out, (buildHeader + _compiled.compiledCode), () => {
+        console.info( `${properties.out} written` );
+    } );
+    fs.writeFile( `${properties.out}.map`, _compiled.sourceMap, () => {
+        console.info( `${properties.out}.map written` );
+    } );
 }
-for ( const warning of out.warnings ) {
-    console.warn( warning );
-}
 
-/**
- * Write to file
- */
-fs.writeFile( './dist/crouch.js', buildHeader + out.compiledCode, () => {
-    console.log( 'crouch.js written' );
-} );
-fs.writeFile( './dist/crouch.js.map', out.sourceMap, () => {
-    console.log( 'crouch.js.map written' );
+
+compileAndSave( {
+    in:    './lib/crouch.js',
+    out:   './dist/crouch.js',
+    flags: {
+        createSourceMap: true,
+        languageIn:      'ES6',
+        languageOut:     'ES5_STRICT',
+    }
 } );
