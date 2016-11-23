@@ -61,8 +61,9 @@ compileAndSave( {
     in:    './lib/crouch.js',
     out:   './dist/crouch.js',
     flags: {
-        createSourceMap: true,
-        languageIn:      'ES6',
-        languageOut:     'ES5_STRICT',
+        createSourceMap:        true,
+        languageIn:             'ES6',
+        languageOut:            'ES5_STRICT',
+        // processCommonJsModules: true,
     }
 } );
