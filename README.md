@@ -19,7 +19,7 @@ npm install --save crouch
 
 In browser get the code https://github.com/hendrysadrak/crouch/tree/master/dist or:
 ```html
-<script src="https://cdn.rawgit.com/hendrysadrak/crouch/blob/master/dist/crouch.js"></script>
+<script src="https://cdn.rawgit.com/hendrysadrak/crouch/master/dist/crouch.js"></script>
 ```
 
 
