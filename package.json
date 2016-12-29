@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/hendrysadrak/crouch",
   "devDependencies": {
-    "google-closure-compiler-js": "^20160828.0.1"
+    "google-closure-compiler-js": "^20161201.0.0"
   }
 }
