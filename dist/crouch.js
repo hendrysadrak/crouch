@@ -1,6 +1,6 @@
 /**!
- * Crouch.js – v0.0.6
- * Compiled Thu Dec 29 2016 12:23:54 GMT+0200 (EET)
+ * Crouch.js – v0.1.0
+ * Compiled Thu Dec 29 2016 12:24:51 GMT+0200 (EET)
  * @author: Hendry Sadrak (https://www.hendrysadrak.com)
  * @license: MIT
  * http://www.opensource.org/licenses/mit-license
