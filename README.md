@@ -7,6 +7,11 @@ Crouch is a micro JS template engine. I created this because I had a need for su
 So I created `crouch`. It can replace placeholders formated as `{number|string}` in example `{0}` `{1}` `{hello}` `{World}`.
 
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/yRPMG8yhBWTHDJKgBoKz7fVY/hendrysadrak/crouch'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/yRPMG8yhBWTHDJKgBoKz7fVY/hendrysadrak/crouch.svg' />
+</a>
+
+
 ## Installation
 
 The module is intended to be used in browsers as well as in Node.js
