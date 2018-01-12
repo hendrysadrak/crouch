@@ -4,7 +4,6 @@
   "description": "Micro JS templating engine",
   "main": "dist/crouch.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build.js",
     "prepublish": "npm run build"
   },
