@@ -93,6 +93,15 @@ test( 'Strings and numbers', t => {
 } );
 
 
+test( 'Values as array', t => {
+  const expected = 'A large 123 fawn jumped quickly over white zinc boxes';
+  const template = 'A large {0}{1}{2} fawn jumped quickly over white zinc boxes';
+  const values   = [ 1, 2, 3 ];
+
+  t.is( crouch( template, values ), expected );
+} );
+
+
 test( 'Try with null as template keyword', t => {
   const expected = 'Exquisite farm wench gives body jolt to prize stinker';
   const template = '{null}';
