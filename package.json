@@ -5,7 +5,8 @@
   "main": "dist/crouch.js",
   "scripts": {
     "build": "node build.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build && npm run test",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/hendrysadrak/crouch",
   "devDependencies": {
+    "ava": "^0.24.0",
     "google-closure-compiler-js": "^20180101.0.0"
   }
 }
