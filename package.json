@@ -1,6 +1,6 @@
 {
   "name": "crouch",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Micro JS templating engine",
   "main": "dist/crouch.js",
   "es2015": "lib/crouch.js",
