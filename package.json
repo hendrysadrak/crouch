@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "Micro JS templating engine",
   "main": "dist/crouch.js",
+  "es2015": "lib/crouch.js",
   "scripts": {
     "build": "node build.js",
     "prepublish": "npm run build && npm run test",
@@ -17,6 +18,12 @@
     "js",
     "parser"
   ],
+  "files": [
+    "dist/",
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
   "author": "Hendry Sadrak <hendry.sadrak@outlook.com> (http://hendrysadrak.com)",
   "license": "MIT",
   "bugs": {
@@ -24,7 +31,7 @@
   },
   "homepage": "https://github.com/hendrysadrak/crouch",
   "devDependencies": {
-    "ava": "^0.24.0",
-    "google-closure-compiler-js": "^20180101.0.0"
+    "ava": "^0.25.0",
+    "google-closure-compiler-js": "^20180506.0.0"
   }
 }
